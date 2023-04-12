@@ -1,5 +1,4 @@
 ﻿using Dapper;
-using Database.Dapper.Migrations;
 using FluentMigrator.Runner;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.DependencyInjection;
@@ -53,8 +52,7 @@ namespace Database.Dapper
 
         private static ServiceProvider CreateServices()
         {
-            return new ServiceCollection()
-                
+            return new ServiceCollection()                
                 .AddFluentMigratorCore()
                 .ConfigureRunner(rb => rb                    
                     .AddSqlServer()                    
