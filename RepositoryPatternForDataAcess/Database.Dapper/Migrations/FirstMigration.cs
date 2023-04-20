@@ -7,12 +7,12 @@ namespace Database.Dapper.Migrations
     {
         public override void Down()
         {
-            Delete.Table("ConcreteEntities");
+            Delete.Table("MainEntities");
         }
 
         public override void Up()
         {
-            Create.Table("ConcreteEntities")
+            Create.Table("MainEntities")
                 .WithColumn("Id").AsGuid().NotNullable().PrimaryKey()
                 .WithColumn("Name").AsString(50).NotNullable()
                 .WithColumn("CreationDate").AsDateTime().NotNullable();
