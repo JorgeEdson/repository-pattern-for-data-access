@@ -6,5 +6,10 @@ namespace Domain.Entities
     {
         public Guid MainEntityId { get; set; }
         public string SpecificProperty { get; set; }
+
+        public SecondEntity() : base(Guid.NewGuid())
+        {
+
+        }
     }
 }

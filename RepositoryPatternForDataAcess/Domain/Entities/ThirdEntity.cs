@@ -7,5 +7,10 @@ namespace Domain.Entities
     {
         public List<MainEntity> MainEntities { get; set; }
         public decimal SpecificProperty { get; set; }
+
+        public ThirdEntity() : base(Guid.NewGuid())
+        {
+
+        }
     }
 }

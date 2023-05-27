@@ -7,11 +7,8 @@ using System.Reflection;
 
 namespace Database.Dapper
 {
-    public  class DapperContext
+    public class DapperContext
     {
-        private IDbConnection CreateConnection()
-            => new SqlConnection(ConnectionStrings.SQL_CONNECTION);
-
         private IDbConnection CreateMasterConnection()
             => new SqlConnection(ConnectionStrings.MASTER_CONNECTION);
 
@@ -44,8 +41,7 @@ namespace Database.Dapper
         {
             using (var serviceProvider = CreateServices())
             using (var scope = serviceProvider.CreateScope())
-            {
-                
+            {                
                 UpdateDatabase(scope.ServiceProvider);
             }
         }
@@ -68,6 +64,5 @@ namespace Database.Dapper
             runner.ListMigrations();
             runner.MigrateUp();
         }        
-
     }
 }

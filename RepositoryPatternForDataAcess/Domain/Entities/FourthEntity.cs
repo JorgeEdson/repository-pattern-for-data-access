@@ -6,5 +6,10 @@ namespace Domain.Entities
     {
         public List<MainEntity> MainEntities { get; set; }
         public byte SpecificProperty { get; set; }
+
+        public FourthEntity() : base(Guid.NewGuid())
+        {
+
+        }
     }
 }

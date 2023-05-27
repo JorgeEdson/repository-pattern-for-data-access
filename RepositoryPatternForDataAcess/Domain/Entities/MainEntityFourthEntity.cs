@@ -2,6 +2,7 @@
 {
     public class MainEntityFourthEntity 
     {
+        public Guid Id { get; private set; }
         public Guid MainEntityId { get; set; }
         public MainEntity MainEntity { get; set; }
         public Guid FourthEntityId { get; set; }
